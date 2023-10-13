@@ -1,13 +1,140 @@
-body {
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+*{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+.heroImg{
+  animation: imgRotate 10s ease-in-out 0.2s infinite alternate-reverse;
+}
+@keyframes imgRotate{
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg) scale(1.3, 1.3) ;
+  }
+}
+.aboutMe{
+  padding: 30px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.starImg{
+  width: 18px;
+  height: 18px;
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  background-image: url("https://images.unsplash.com/photo-1591968743883-decc954ccce8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fHllbGxvd3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=600&q=60");
+}
+.starImg:nth-child(4){
+  width: 18px;
+  height: 18px;
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  background-image: url("https://images.unsplash.com/photo-1591968743883-decc954ccce8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1935&q=80");
+  background-size: cover;
+}
+.starImg:last-child{
+  background-image: url("https://images.unsplash.com/photo-1629196911514-cfd8d628ba26?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1899&q=80");
+  background-size: cover;
+}
+
+.steps{
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-image: url("https://images.unsplash.com/photo-1548318281-7da3085ce691?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1941&q=80");
+  background-size: cover;
+  animation: stepAnimation 10s ease-in-out 0.2s infinite;
+}
+
+@keyframes stepAnimation{
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+.stepsImg{
+  animation: experienceAnimation 10s ease-in-out 0.2s infinite;
+}
+@keyframes experienceAnimation {
+  0%{
+    transform: translateX(0);
+  }
+  50%{
+    transform: translateX(300px);
+  }
+  100%{
+    transform: translateX(550px) scale(0.5, 0.5) rotate(360deg);
+  }
+
+}
+
+.ProjectCard:hover, .SkillCard:hover{
+  transform: scale(1.3,1.3);
+}
+
+.standared{
+  width: 180px;
+  height: 180px;
+  background-image: url("https://images.unsplash.com/photo-1591968743883-decc954ccce8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fHllbGxvd3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=600&q=60");
+  background-size: cover;
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  animation: standaredBeat 1s ease-out 0.5s infinite;
+}
+
+
+.heart{
+    
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: relative;
+    transform: rotate(45deg);
+    animation-name: heartbeat;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+}
+.heart::after{
+    content: "";
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: absolute;
+    transform: translateY(-50px);
+    border-radius: 50%;
+}
+.heart::before{
+    content: "";
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: absolute;
+    transform: translateX(-50px);
+    border-radius: 50%;
+}
+.btech{
+    animation-name: standaredBeat;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+}
+@keyframes heartbeat{
+    0%{
+        transform: scale(1.1,1.1) rotate(45deg);
+    }
+    100%{
+        transform: scale(1,1) rotate(45deg);
+    }
+}
+
+@keyframes standaredBeat{
+  0%{
+    transform: scale(1,1);
+  }
+  100%{
+    transform: scale(1.3,1.3);
+  }
 }
