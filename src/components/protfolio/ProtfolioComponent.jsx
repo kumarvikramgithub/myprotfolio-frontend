@@ -1,23 +1,26 @@
 import React from "react";
-// import { Outlet } from "react-router-dom";
 import SkillCardComponent from './../shared/SkillCardComponent';
 import ProjectCardComponent from './../shared/ProjectCardComponent';
 import ContactDetails from './../contacts/ContactDetails';
 import ReviewComponent from './../shared/ReviewComponent';
+import "./ProtfolioComponent.css";
+
+
+
 const ProtfolioComponent = () => {
     const mySkills = [1,2,3,4,5,6,7,8]
   return (
     <div className="w-full h-full">
       <div className="px-20 bg-slate-200 hero-section flex justify-evenly items-center flex-wrap">
-        <div className="flex-grow">
-          <div className="pl-40">
-            <h1 className="text-5xl font-bold uppercase text-sky-500 leading-10 italic">
+        <div className="flex-grow py-10">
+          <div className="md:pl-40">
+            <h1 className="md:text-5xl text-3xl font-bold uppercase text-sky-500 leading-10 italic">
               Hello,
             </h1>
-            <span className=" inline-block text-xl font-semibold text-slate-500 my-8">
+            <span className=" inline-block text-xl font-semibold text-slate-500 md:my-8 my-5">
               I am a
             </span>
-            <span className="font-bold text-2xl ml-2 tracking-wider text-green-500">
+            <span className="font-bold md:text-2xl text-xl ml-2 tracking-wider text-green-500">
               Full-Stack Developer &#128578;
             </span>
             <br />
@@ -26,7 +29,7 @@ const ProtfolioComponent = () => {
             </div>
           </div>
         </div>
-        <div className="">
+        <div className="md:block lg:block xl:block hidden">
           <div className="p-16 pb-0 bg-slate-100 rounded-full">
             <img
               src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80"
@@ -44,14 +47,22 @@ const ProtfolioComponent = () => {
         <h1 className="text-3xl underline uppercase text-purple-700 font-bold">
           About Me
         </h1>
-        <div style={{ width: "50%" }} className="my-8 leading-8">
-          <p className="font-semibolds tracking-wider text-md text-justify">
-            Hi, My name is{" "}
-            <span className="font-bold italic">KUMAR VIKRAM</span>. I am
-            Full-stack Developer with 2 years of experties in MERN and MEAN
-            stack Development. I have completed my Bachelor of Technology (B.
-            Tech.) in Computer Science and Engineering (CSE) in August 2021.
-          </p>
+        <div className="flex md:flex-row lg:flex-row xl:flex-row flex-col justify-center items-center">
+          <img
+            src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80"
+            alt="Profile"
+            style={{ width: "200px", height: "200px" }}
+            className=" my-10 shadow-xl rounded-md"
+          />
+          <div style={{ width: "50%" }} className="m-8 leading-8">
+            <p className="font-semibolds tracking-wider text-md text-justify">
+              Hi, My name is{" "}
+              <span className="font-bold italic">KUMAR VIKRAM</span>. I am
+              Full-stack Developer with 2 years of experties in MERN and MEAN
+              stack Development. I have completed my Bachelor of Technology (B.
+              Tech.) in Computer Science and Engineering (CSE) in August 2021.
+            </p>
+          </div>
         </div>
         <div className="p-2 border-2 border-solid border-sky-500 rounded-md text-cyan-100 inline-block font-semibold tracking-wider bg-sky-500 hover:cursor-pointer hover:bg-purple-500 hover:border-purple-500 hover:text-white">
           Download Resume
@@ -60,7 +71,7 @@ const ProtfolioComponent = () => {
 
       {/* my Skills Section */}
 
-      <div className="mySkills md:mx-32 lg:mx-32 my-16 p-12 bg-slate-100 shadow">
+      <div className="mySkills md:mx-32 lg:mx-32 xl:mx-32 my-16 p-12 bg-slate-100 shadow">
         <h1 className="text-4xl font-bold text-green-500 tracking-widest underline">
           My skills
         </h1>
@@ -77,8 +88,11 @@ const ProtfolioComponent = () => {
         <h1 className="text-3xl underline uppercase text-purple-700 font-bold">
           Experiences
         </h1>
-        <div className="flex justify-center items-center">
-          <div className="my-8 leading-8 steps flex justify-center items-center">
+        <div className="flex flex-col md:flex-row justify-center items-center">
+          <div
+            id="ForMidAndMoreScrennOnly"
+            className="mt-8 md:my-8 lg:my-8 xl:my-8 leading-8 steps hidden md:flex lg:flex xl:flex justify-center items-center"
+          >
             <div className="rounded-full stepsImg">
               <img
                 src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80"
@@ -88,8 +102,24 @@ const ProtfolioComponent = () => {
             </div>
           </div>
           <div
-            style={{ width: "100px", height: "2px" }}
-            className="border-2 border-solid border-purple-500"
+            id="ForSmallScrennOnly"
+            className="mt-8 md:my-8 lg:my-8 xl:my-8 leading-8 steps flex md:hidden lg:hidden xl:hidden justify-center items-center"
+          >
+            <div className="rounded-full smStepImg">
+              <img
+                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80"
+                alt="Profile"
+                style={{ width: "150px", height: "150px", borderRadius: "50%" }}
+              />
+            </div>
+          </div>
+          <div
+            style={{ width: "100px", height: "1px" }}
+            className="border-2 border-solid border-purple-500 hidden md:block lg:block xl:block"
+          ></div>
+          <div
+            style={{ width: "1px", height: "100px" }}
+            className="border-2 border-solid border-purple-500 block md:hidden lg:hidden xl:hidden"
           ></div>
           <div className="flex flex-col justify-center items-center rounded-md p-4 bg-cyan-400 shadow-2xl">
             <div>
@@ -109,8 +139,12 @@ const ProtfolioComponent = () => {
             </div>
           </div>
           <div
-            style={{ width: "100px", height: "2px" }}
-            className="border-2 border-solid border-purple-500"
+            style={{ width: "100px", height: "1px" }}
+            className="border-2 border-solid border-purple-500 hidden md:block lg:block xl:block"
+          ></div>
+          <div
+            style={{ width: "1px", height: "100px" }}
+            className="border-2 border-solid border-purple-500 block md:hidden lg:hidden xl:hidden"
           ></div>
           <div className="flex flex-col justify-center items-center rounded-md p-4 bg-slate-200 shadow-2xl">
             <div>
@@ -132,11 +166,11 @@ const ProtfolioComponent = () => {
 
       {/* my Projects Section */}
 
-      <div className="md:mx-24 lg:mx-24 my-16 p-12 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 ">
-        <h1 className="text-4xl mb-8 font-bold text-slate-100 tracking-widest underline">
+      <div className="md:mx-24 lg:mx-24 xl:mx-24 my-16 p-12 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 ">
+        <h1 className="text-center md:text-left lg:text-left xl:text-left text-4xl mb-8 font-bold text-slate-100 tracking-widest underline">
           Projects
         </h1>
-        <div className="flex justify-between  flex-wrap">
+        <div className="flex justify-between items-center  flex-wrap">
           {mySkills.map((skill) => (
             <ProjectCardComponent key={skill} projectName="amazon" />
           ))}
@@ -154,7 +188,7 @@ const ProtfolioComponent = () => {
             style={{ width: "1px", height: "150px" }}
             className="border-2 border-solid border-purple-500"
           ></div>
-          <div className="flex justify-center items-center">
+          <div className="flex flex-col md:flex-row lg:flex-row xl:flex-row justify-center items-center">
             <div className="bg-green-500 p-4 rounded-md">
               <span className="font-semibold text-lg text-slate-500 tracking-wider">
                 Apr 2013 - Jul 2015
@@ -162,7 +196,11 @@ const ProtfolioComponent = () => {
             </div>
             <div
               style={{ width: "90px", height: "1px" }}
-              className="border-2 border-solid border-purple-500"
+              className="border-2 border-solid border-purple-500 hidden md:block  lg:block  xl:block"
+            ></div>
+            <div
+              style={{ width: "1px", height: "100px" }}
+              className="border-2 border-solid border-purple-500 block md:hidden lg:hidden xl:hidden"
             ></div>
             <div className="rounded-full border-2 border-solid border-purple-500">
               <div className="standared flex justify-center items-center">
@@ -173,7 +211,11 @@ const ProtfolioComponent = () => {
             </div>
             <div
               style={{ width: "40px", height: "1px" }}
-              className="border-2 border-solid border-purple-500"
+              className="border-2 border-solid border-purple-500 hidden md:block  lg:block  xl:block"
+            ></div>
+            <div
+              style={{ width: "1px", height: "100px" }}
+              className="border-2 border-solid border-purple-500 block md:hidden lg:hidden xl:hidden"
             ></div>
             <div className="bg-sky-700 p-4 rounded-md flex flex-col justify-center items-center">
               <span className="font-semibold text-lg text-slate-100 tracking-wide">
@@ -198,7 +240,7 @@ const ProtfolioComponent = () => {
             style={{ width: "1px", height: "100px" }}
             className="border-2 border-solid border-purple-500 shadow-2xl"
           ></div>
-          <div className="flex justify-center items-center">
+          <div className="flex flex-col-reverse md:flex-row lg:flex-row xl:flex-row justify-center items-center">
             <div className="bg-sky-700 p-4 rounded-md flex flex-col justify-center items-center">
               <span className="font-semibold text-lg text-slate-100 tracking-wide">
                 Government Polytechnic Saharsa
@@ -218,7 +260,11 @@ const ProtfolioComponent = () => {
             </div>
             <div
               style={{ width: "60px", height: "1px" }}
-              className="border-2 border-solid border-purple-500"
+              className="border-2 border-solid border-purple-500 hidden md:block  lg:block  xl:block"
+            ></div>
+            <div
+              style={{ width: "1px", height: "100px" }}
+              className="border-2 border-solid border-purple-500 block md:hidden lg:hidden xl:hidden"
             ></div>
             <div className="rounded-full border-2 border-solid border-purple-500">
               <div className="standared flex justify-center items-center">
@@ -229,7 +275,11 @@ const ProtfolioComponent = () => {
             </div>
             <div
               style={{ width: "185px", height: "1px" }}
-              className="border-2 border-solid border-purple-500"
+              className="border-2 border-solid border-purple-500 hidden md:block  lg:block  xl:block"
+            ></div>
+            <div
+              style={{ width: "1px", height: "100px" }}
+              className="border-2 border-solid border-purple-500 block md:hidden lg:hidden xl:hidden"
             ></div>
             <div className="bg-green-500 p-4 rounded-md">
               <span className="font-semibold text-lg text-slate-500 tracking-wider">
@@ -248,7 +298,7 @@ const ProtfolioComponent = () => {
             style={{ width: "1px", height: "100px" }}
             className="border-2 border-solid border-purple-500 shadow-2xl"
           ></div>
-          <div className="relative flex justify-center items-center">
+          <div className="relative flex flex-col md:flex-row lg:flex-row xl:flex-row justify-center items-center">
             <div className="bg-green-500 p-4 rounded-md">
               <span className="font-semibold text-lg text-slate-500 tracking-wider">
                 Aug 2018 - Aug 2021
@@ -256,11 +306,15 @@ const ProtfolioComponent = () => {
             </div>
             <div
               style={{ width: "263px", height: "1px" }}
-              className="border-2 border-solid border-purple-500"
+              className="border-2 border-solid border-purple-500 hidden md:block  lg:block  xl:block"
+            ></div>
+            <div
+              style={{ width: "1px", height: "150px" }}
+              className="border-2 border-solid border-purple-500 block md:hidden lg:hidden xl:hidden"
             ></div>
             <div>
               <div className="heart flex justify-center items-center p-4 bg-slate-200 shadow-2xl"></div>
-              <div className="btech absolute top-3 z-50">
+              <div className="btech absolute top-52 md:top-3 lg:top-3 xl:top-3 z-50">
                 <span className="font-bold ml-2 text-xl text-slate-100 tracking-wider">
                   B. Tech.
                 </span>
@@ -268,7 +322,11 @@ const ProtfolioComponent = () => {
             </div>
             <div
               style={{ width: "90px", height: "1px" }}
-              className="border-2 border-solid border-purple-500"
+              className="border-2 border-solid border-purple-500 hidden md:block  lg:block  xl:block"
+            ></div>
+            <div
+              style={{ width: "1px", height: "150px" }}
+              className="border-2 border-solid border-purple-500 block md:hidden lg:hidden xl:hidden"
             ></div>
             <div className="bg-sky-700 p-4 rounded-md flex flex-col justify-center items-center">
               <span className="font-semibold text-lg text-slate-100 tracking-wide">
@@ -330,7 +388,7 @@ const ProtfolioComponent = () => {
         <h1 className="text-4xl text-center mb-8 font-bold text-sky-500 tracking-widest">
           Review and Appreciation
         </h1>
-        <div className=" flex md:justify-between justify-center items-center flex-wrap my-10 ">
+        <div className=" flex justify-between items-center flex-wrap my-10 ">
           {mySkills.push(8) &&
             mySkills.map((skill) => <ReviewComponent key={skill} />)}
         </div>

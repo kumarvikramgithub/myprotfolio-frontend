@@ -1,6 +1,6 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
-import { MenuContext } from "../context/MenuContext";
+import { MenuContext } from "../../context/MenuContext";
 const Navbar = () => {
   const {active, setActive} = React.useContext(MenuContext);
   // console.log(mycon)

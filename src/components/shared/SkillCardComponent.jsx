@@ -3,8 +3,8 @@ import React from "react";
 const SkillCardComponent = () => {
   return (
     <div
-      className="SkillCard p-4 my-5 bg-slate-700 rounded-lg"
-      style={{ width: "200px" }}
+      className="SkillCard p-4 md:w-1/24 lg:w-1/24 xl:w-1/24 w-1/45 my-5 bg-slate-700 rounded-lg"
+      // style={{ width: "200px" }}
     >
       <div className="cardImg mb-2">
         <img

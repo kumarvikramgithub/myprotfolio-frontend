@@ -5,8 +5,8 @@ import { Icon } from "@iconify/react";
 const ProjectCardComponent = ({ projectName }) => {
   return (
     <div
-      className="ProjectCard p-4 my-5 bg-sky-500 rounded-lg"
-      style={{ width: "220px" }}
+      className="ProjectCard p-4 xl:p-4 mx-16 my-6 md:mx-4 lg:mx-0 xl:mx-0 md:my-5 lg:my-5 xl:my-5 w-2/3 md:w-1/45 lg:w-1/24 xl:w-1/24  bg-sky-500 hover:bg-slate-700 rounded-lg"
+      // style={{ width: "220px" }}
     >
       <div className="cardImg mb-2">
         <img
@@ -28,7 +28,7 @@ const ProjectCardComponent = ({ projectName }) => {
                 className="inline mr-1 text-xl  hover:underline hover: hover:text-slate-500"
               />
             </Link>
-            MRR
+            Amazon
           </span>
         </div>
         <div className=" flex text-purple-700 font-semibold items-center justify-end ml-3">
